@@ -9,5 +9,4 @@ class Album < ApplicationRecord
     def image_presence
         errors.add(:images, "please select images") unless (images.attached? && header_image.attached?)
     end
-
 end

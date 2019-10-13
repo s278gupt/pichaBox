@@ -7,3 +7,29 @@
       width: 100%;
     }
 }
+
+.albums{
+    margin: 50px 180px 10px;  .post{
+      border: 1px solid #efefef;
+      margin: 60px 0;
+      border-radius: 3px;
+      .metadata{
+        border-bottom: 1px solid #efefef;
+        display: flex;
+        .date{
+          padding-top: 13px;
+          color: #262626;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }    
+      .main-image{
+        width: 100%;
+        border-bottom: 1px solid #f4f4f4;
+      }
+      .description{
+        padding: 20px;
+      }
+    }
+  }
+  
