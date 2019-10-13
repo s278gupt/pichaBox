@@ -1,21 +1,25 @@
-<div class="albums">
-  <% @albums.each do |album| %>
-    <section class="album">
-        <div class="metadata">
-            <div class="date">
-                <%= album.created_at %>
-            </div>
-        </div>
-        <%= image_tag album.header_image, class: 'main-image' %>
-        <div class="tags">
-            <%= album.description %>
-        </div>
-    </section>
-  <% end %>
-</div>
-
+<div class="homepage">
 <% if user_signed_in? %>
-    <%= link_to 'New Album', new_album_path %>
+    <%= link_to 'New Album', new_album_path %><br>
+    <div class="albums">
+        <% @albums.each do |album| %>
+            <section class="album">
+                <div class="metadata">
+                    <div class="date">
+                        <%= album.created_at %>
+                    </div>
+                </div>
+                <%= image_tag album.header_image, class: 'main-image' %>
+                <div class="tags">
+                    <h3>
+                        <%= link_to album.description, album %>
+                    </h3>
+                    <%= button_to 'Remove', album, method: :delete, data: { confirm: "Are you sure?" }%>
+                </div>
+            </section>
+        <% end %>
+    </div>
 <% else %>
     <%= button_to "Sign in", new_user_session_path %>
 <% end %>
+</div>

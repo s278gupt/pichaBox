@@ -1,0 +1,15 @@
+<%= link_to 'Back', root_path %>
+<h1><%= @album.description %></h1>
+
+<div class="gallery" id="gallery">
+  <% @album.images.each do |image| %>
+    <div class="mb-3 pics all 2">
+        <%= image_tag image, class: 'rounded' %>
+        <div class="caption">
+            <%= button_to 'Remove', album(image.id),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+        </div>
+    </div>
+  <% end %>
+</div>
