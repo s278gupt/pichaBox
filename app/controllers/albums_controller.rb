@@ -6,8 +6,8 @@ class AlbumsController < ApplicationController
 
     # POST albums/new
     def create
-       Album.create(album_params)
-        
+        Album.create(album_params)
+
         redirect_to root_path
     end
 
