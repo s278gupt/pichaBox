@@ -6,9 +6,10 @@
     <div class="mb-3 pics all 2">
         <%= image_tag image, class: 'rounded' %>
         <div class="caption">
-            <%= button_to 'Remove', album(image.id),
-                method: :delete,
-                data: { confirm: 'Are you sure?' } %>
+        <%= button_to "Remove", 
+          delete_image_attachment_album_url(image), 
+          method: :delete, 
+          data: {confirm: "Are you sure?"} %>
         </div>
     </div>
   <% end %>

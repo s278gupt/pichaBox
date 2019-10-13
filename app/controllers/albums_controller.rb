@@ -20,15 +20,19 @@ class AlbumsController < ApplicationController
 
     # DELETE albums/:id
     def destroy
-        if params[:image_id]
-            @album.images.find_by_id(params[:image_id]).purge
-        else
-            @album.destroy
-    
-            redirect_to root_path
-        end
+        @album.destroy
+
+        redirect_to root_path
     end
 
+    # DELETE albums/:id/image_attachment
+    def delete_image_attachment
+        @image = ActiveStorage::Attachment.find(params[:id])
+        @image.purge    
+
+        redirect_back(fallback_location: root_path) 
+    end
+    
     private
         def set_album
             @album = current_user.albums.find(params[:id])   
