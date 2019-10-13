@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   
   root to: 'home#index'
 
-  resources :albums, only: [:new, :create]
+  resources :albums
 end
