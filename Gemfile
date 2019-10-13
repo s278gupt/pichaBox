@@ -19,6 +19,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # Use PostgreSQL for database
 gem 'pg'
+# Use Bootstrap for styling
+gem 'bootstrap', '~> 4.1.1'
+# Use JQuery for Bootstrap CSS
+gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
