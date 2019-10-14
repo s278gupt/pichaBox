@@ -8,12 +8,14 @@
 <div class="gallery" id="gallery">
   <% @album.images.each do |image| %>
     <div class="mb-3 pics all 2">
-        <%= image_tag image, class: 'rounded' %>
+        <%= image_tag image, class: 'rounded gallery-image' %>
         <div class="caption">
-        <%= button_to "Remove", 
-          delete_image_attachment_album_path(image), 
-          method: :delete, 
-          data: {confirm: "Are you sure?"} %>
+        <%= link_to "Image Info", class: 'gallery-link' %>
+          <%= button_to "Remove", 
+            delete_image_attachment_album_path(image), 
+            method: :delete, 
+            data: {confirm: "Are you sure?"},
+            class: 'gallery-link' %>
         </div>
     </div>
   <% end %>
