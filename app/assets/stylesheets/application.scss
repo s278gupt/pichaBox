@@ -43,11 +43,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin: 0 20px;
+    margin: 20px;
       .album{   
         width: 280px;
         height: 280px;
-        margin: 15px;   
+        margin: 15px;  
+        margin-bottom: 100px; 
         .metadata{
           border-bottom: 1px solid #efefef;
           display: flex;
@@ -60,7 +61,6 @@
           }
         }
         .main-image{
-          width: 100%;
           border-radius: 4%;
           width: 278px;
           height: 278px;
