@@ -38,8 +38,8 @@ class AlbumsController < ApplicationController
     end
 
     def update
-        @album.update(description: params[:album][:description])
-        redirect_to root_path
+        @album.update(description: params[:album][:description], images: params[:album][:images])
+        redirect_back(fallback_location: root_path)
     end
     
     private

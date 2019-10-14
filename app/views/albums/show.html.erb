@@ -1,4 +1,8 @@
-<%= link_to 'Back', root_path %>
+<div class = "links">
+  <%= link_to 'Back', root_path, class: 'link' %>
+  <%= link_to 'Upload new images', edit_album_path, class: 'link' %>
+</div>
+
 <h1><%= @album.description %></h1>
 
 <div class="gallery" id="gallery">
