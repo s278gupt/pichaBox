@@ -29,6 +29,8 @@ gem 'font-awesome-rails'
 gem 'devise'
 # Use MiniMagick for reading image data
 gem 'mini_magick'
+# Use Exifr to analyze active storage metadata
+gem 'exifr'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
