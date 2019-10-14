@@ -19,9 +19,13 @@
     .caption {
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         .gallery-link {
             margin: 10px;
+        }
+        .metadata {
+            font-size: 10px;
+            list-style-type: none;
         }
     }
 }

@@ -37,12 +37,13 @@ class AlbumsController < ApplicationController
     def edit
     end
 
+    # PUT albums/:id/
     def update
         @album.update(description: params[:album][:description], images: params[:album][:images])
         
         redirect_to album_path
     end
-    
+
     private
         def set_album
             @album = current_user.albums.find(params[:id])   

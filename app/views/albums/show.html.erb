@@ -8,9 +8,12 @@
 <div class="gallery" id="gallery">
   <% @album.images.each do |image| %>
     <div class="mb-3 pics all 2">
-        <%= image_tag image, class: 'rounded gallery-image' %>
+        <%= image_tag @album.image_resize(image.id), class: 'rounded gallery-image' %>
         <div class="caption">
-        <%= link_to "Image Info", class: 'gallery-link' %>
+          <ul class="metadata">
+            <li><%= image.metadata['width'] %> x <%= image.metadata['height'] %></li>
+            <li><%= image.created_at %></li>
+          </ul>
           <%= button_to "Remove", 
             delete_image_attachment_album_path(image), 
             method: :delete, 
