@@ -15,18 +15,23 @@
         <%= form.label "Name of Album" %>
         <%= form.text_field :description %>
     </div>
-    <div class="form-group">
-        <%= form.label :header_image %>
-        <%= form.file_field :header_image %>
-    </div>
-    <div class="form-group">
-        <%= form.label :images %>
-        <%= form.file_field :images, multiple: true %>
-    </div>
-    <div class="form-group">
-        <%= form.text_field :user_id, value: current_user.id, class:'d-none'%>
-     </div>
+
+    <% if album.new_record? %>
+        <div class="form-group">
+            <%= form.label :header_image %>
+            <%= form.file_field :header_image %>
+        </div>
+        <div class="form-group">
+            <%= form.label :images %>
+            <%= form.file_field :images, multiple: true %>
+        </div>
+        <div class="form-group">
+            <%= form.text_field :user_id, value: current_user.id, class:'d-none'%>
+        </div>
+    <% end %>
+
     <div class="form-group">
         <%= form.submit class: "btn btn-primary" %>
     </div>
+    
 <% end %>

@@ -1,5 +1,5 @@
 class AlbumsController < ApplicationController
-    before_action :set_album, only: [:destroy]
+    before_action :set_album, only: [:destroy, :edit, :update]
 
     # GET albums/new
     def new
@@ -31,6 +31,15 @@ class AlbumsController < ApplicationController
         @image.purge    
 
         redirect_back(fallback_location: root_path) 
+    end
+
+    # GET albums/:id/edit
+    def edit
+    end
+
+    def update
+        @album.update(description: params[:album][:description])
+        redirect_to root_path
     end
     
     private

@@ -7,7 +7,7 @@
         <%= image_tag image, class: 'rounded' %>
         <div class="caption">
         <%= button_to "Remove", 
-          delete_image_attachment_album_url(image), 
+          delete_image_attachment_album_path(image), 
           method: :delete, 
           data: {confirm: "Are you sure?"} %>
         </div>

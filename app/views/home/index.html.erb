@@ -8,9 +8,10 @@
                     <div class="date">
                         <%= album.created_at %>
                     </div>
+                    <%= link_to "Rename", edit_album_path(album) %>
                 </div>
                 <%= image_tag album.header_image, class: 'main-image' %>
-                <div class="tags">
+                <div class="name">
                     <h3>
                         <%= link_to album.description, album %>
                     </h3>
