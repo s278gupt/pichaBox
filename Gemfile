@@ -20,7 +20,7 @@ gem 'jbuilder', '~> 2.7'
 # Use PostgreSQL as the database for Active Record
 gem 'pg'
 # Use Bootstrap for styling
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 # Use JQuery for Bootstrap CSS
 gem 'jquery-rails'
 # Use FA icons for styling
